@@ -25,7 +25,7 @@ public class BasicWorkloadGenerator implements WorkloadGeneratorInt {
 	public ArrayList<Job> generateWorkloadForLongJobs(int tickTimeDuration, int currentSimulationTick) {
 		ArrayList<Job> listJobsWorkloadForLongJobs = new ArrayList<Job>();
 
-		if(Math.random()>0.99){
+		if(Math.random()>0.97){
 			Job job = new Job(jobCounter++, false);
 			job.addTask(new Task(taskCounter++, 2000, 100, 100));
 			job.addTask(new Task(taskCounter++, 2000, 100, 100));

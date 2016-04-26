@@ -34,6 +34,7 @@ import cs.config.ModelConfiguration;
 import cs.dataexport.DataExport;
 import cs.dataexport.ExportManager;
 import cs.entities.stats.ConsumerStatsEvent;
+import cs.entities.stats.JobStatsEvent;
 
 public class EventWatcherEndSimulation implements SimulationClockEvent{
 
@@ -65,8 +66,12 @@ public class EventWatcherEndSimulation implements SimulationClockEvent{
 	}
 
 	private void exportPerformanceStats(){
-		ArrayList<ConsumerStatsEvent> listConsumerStatsEvent = modelInterface.getPerformanceMonitor().getListConsumerStatsEvent();
 		logger.info("============================== consumer stats ====================================");
+		ArrayList<ConsumerStatsEvent> listConsumerStatsEvent = modelInterface.getPerformanceMonitor().getListConsumerStatsEvent();
+		int totalQueuedShortJobs = 0;
+		int totalCompletedShortJobs = 0;
+		int totalQueuedLongJobs = 0;
+		int totalCompletedLongJobs = 0;
 		for(int i=0;i<listConsumerStatsEvent.size();i++) {
 			ConsumerStatsEvent event = listConsumerStatsEvent.get(i);
 			logger.info("tick: "+event.getTickNumber()+ 
@@ -75,7 +80,31 @@ public class EventWatcherEndSimulation implements SimulationClockEvent{
 					" L["+event.getNumberOfQueuedLongJobs()+
 					":"+event.getNumberOfCompletedLongJobs()+"]"
 					);
+			totalQueuedShortJobs = totalQueuedShortJobs + event.getNumberOfQueuedShortJobs();
+			totalQueuedLongJobs = totalQueuedLongJobs + event.getNumberOfQueuedLongJobs();
+			totalCompletedShortJobs = totalCompletedShortJobs + event.getNumberOfCompletedShortJobs();
+			totalCompletedLongJobs = totalCompletedLongJobs + event.getNumberOfCompletedLongJobs();
 		}
+		logger.info("SUM"+ 
+				" S["+totalQueuedShortJobs+
+				":"+totalCompletedShortJobs+"]"+
+				" L["+totalQueuedLongJobs+
+				":"+totalCompletedLongJobs+"]"
+				);
+		
+		/*
+		logger.info("============================== job stats ====================================");
+		ArrayList<JobStatsEvent> listJobStatsEvent = modelInterface.getPerformanceMonitor().getListJobStatsEvent();
+		for(int i=0;i<listJobStatsEvent.size();i++) {
+			JobStatsEvent event = listJobStatsEvent.get(i);
+			logger.info("tick: "+event.getTickNumber()+ 
+					" consumer queue["+event.getTicksWaitingInQueueTime()+"]" +
+					" schedule["+event.getTicksSchedulingTime()+"]"+
+					" start processing["+event.getTicksStartExecutionTime()+"]"+
+					" processing["+event.getTicksProcessingTime()+"]"
+					);
+		}
+		*/
 	}
 	
 	//finalise any necessary actions to export the simulation logs

@@ -14,6 +14,8 @@ public class PerformanceMonitor {
 	private ArrayList<ConsumerStatsEvent> listConsumerStatsEvent = new ArrayList<ConsumerStatsEvent>();
 	//holds provider stats events
 	private ArrayList<ProviderStatsEvent> listProviderStatsEvent = new ArrayList<ProviderStatsEvent>();
+	//holds jobs stats events
+	private ArrayList<JobStatsEvent> listJobStatsEvent = new ArrayList<JobStatsEvent>();
 	
 	private ArrayList<Job> listCompletedJobs = new ArrayList<Job>();
 	private ArrayList<Job> listQueuedJobs = new ArrayList<Job>();
@@ -26,7 +28,7 @@ public class PerformanceMonitor {
 		listQueuedJobs.add(job);
 	}
 
-	private void clearConsumerData(int tickTimeDuration, int currentSimulationTick) {
+	private void clearIntervalData(int tickTimeDuration, int currentSimulationTick) {
 		listQueuedJobs.clear();
 		listCompletedJobs.clear();
 	}
@@ -41,7 +43,8 @@ public class PerformanceMonitor {
 		statsEvent.setTickNumber(currentSimulationTick);
 		statsEvent.setTickTimeDuration(tickTimeDuration);
 		
-		//calculate number of queued jobs per job type
+		//============================== consumer stats ==============================
+		//--------------------- calculate number of queued jobs per job type
 		int numberOfQueuedShortJobs = 0;
 		int numberOfQueuedLongJobs = 0;
 		for(int i=0;i<listQueuedJobs.size();i++) {
@@ -54,7 +57,7 @@ public class PerformanceMonitor {
 		statsEvent.setNumberOfQueuedShortJobs(numberOfQueuedShortJobs);
 		statsEvent.setNumberOfQueuedLongJobs(numberOfQueuedLongJobs);
 
-		//calculate number of completed jobs per job type
+		//---------------------- calculate number of completed jobs per job type
 		int numberOfCompletedShortJobs = 0;
 		int numberOfCompletedLongJobs = 0;
 		for(int i=0;i<listCompletedJobs.size();i++) {
@@ -68,8 +71,34 @@ public class PerformanceMonitor {
 		statsEvent.setNumberOfCompletedLongJobs(numberOfCompletedLongJobs);
 		
 		listConsumerStatsEvent.add(statsEvent);
+
+		//============================== jobs stats ==============================
+		JobStatsEvent jobStatsEvent = new JobStatsEvent();
+		jobStatsEvent.setTickNumber(currentSimulationTick);
+		jobStatsEvent.setTickTimeDuration(tickTimeDuration);
+
+		//--------------------- calculate jobs stats per job type
+
+		int ticksItTakesToStartScheduling = 0;
+		int ticksItTakesToSchedule = 0;
+		int ticksItTakesToStartExecution = 0;
+		int ticksToExecuteJob = 0;
+		for(int i=0;i<listCompletedJobs.size();i++) {
+			Job completedJob = listCompletedJobs.get(i);
+			ticksItTakesToStartScheduling = ticksItTakesToStartScheduling + completedJob.getTicksItTakesToStartScheduling();
+			ticksItTakesToSchedule = ticksItTakesToSchedule + completedJob.getTicksItTakesToSchedule();
+			ticksItTakesToStartExecution = ticksItTakesToStartExecution + completedJob.getTicksItTakesToStartExecution();
+			ticksToExecuteJob = ticksToExecuteJob + completedJob.getTotalTicksToExecuteJob();
+		}	
+		jobStatsEvent.setTicksWaitingInQueueTime(ticksItTakesToStartScheduling / listCompletedJobs.size());
+		jobStatsEvent.setTicksSchedulingTime(ticksItTakesToSchedule / listCompletedJobs.size());
+		jobStatsEvent.setTicksStartExecutionTime(ticksItTakesToStartExecution / listCompletedJobs.size());
+		jobStatsEvent.setTicksProcessingTime(ticksToExecuteJob / listCompletedJobs.size());
+
+		listJobStatsEvent.add(jobStatsEvent);
+		
 		//clear the list
-		clearConsumerData(tickTimeDuration, currentSimulationTick);
+		clearIntervalData(tickTimeDuration, currentSimulationTick);
 	}
 
 	public ArrayList<ConsumerStatsEvent> getListConsumerStatsEvent() {
@@ -88,6 +117,14 @@ public class PerformanceMonitor {
 	public void setListProviderStatsEvent(
 			ArrayList<ProviderStatsEvent> listProviderStatsEvent) {
 		this.listProviderStatsEvent = listProviderStatsEvent;
+	}
+
+	public ArrayList<JobStatsEvent> getListJobStatsEvent() {
+		return listJobStatsEvent;
+	}
+
+	public void setListJobStatsEvent(ArrayList<JobStatsEvent> listJobStatsEvent) {
+		this.listJobStatsEvent = listJobStatsEvent;
 	}
 
 	

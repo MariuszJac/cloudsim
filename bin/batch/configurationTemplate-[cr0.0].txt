@@ -4,7 +4,7 @@
   "numberOfSimulationRepetitions": 1,
   "numberOfSimulationHours": 1,
   "numberOfConsumersForShortJobs": 1,
-  "numberOfConsumersForLongJobs": 2,
+  "numberOfConsumersForLongJobs": 1,
   "numberOfProviders": 1
 }
 	
