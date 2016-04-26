@@ -1,0 +1,10 @@
+{
+  "templateName": "Default Model Configuration Template",
+  "tickTimeInMilliseconds": 100,
+  "numberOfSimulationRepetitions": 1,
+  "numberOfSimulationHours": 1,
+  "numberOfConsumersForShortJobs": 1,
+  "numberOfConsumersForLongJobs": 2,
+  "numberOfProviders": 1
+}
+	
