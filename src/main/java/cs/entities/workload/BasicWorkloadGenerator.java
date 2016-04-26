@@ -5,6 +5,7 @@ import java.util.ArrayList;
 import cs.entities.Job;
 import cs.entities.Task;
 
+
 public class BasicWorkloadGenerator implements WorkloadGeneratorInt {
 	public int jobCounter = 0;
 	public int taskCounter = 0;
