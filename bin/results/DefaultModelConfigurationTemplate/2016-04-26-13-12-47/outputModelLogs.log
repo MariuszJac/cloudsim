@@ -1,0 +1,226 @@
+2016-04-26 13:12:45,337 INFO main iplatform.batch.ModelRunner - running in batch mode using batch configuration template path: /home/balrog/repos/CloudSim/bin/batch/configurationTemplate-[cr0.0].txt file name: configurationTemplate-[cr0.0].txt
+2016-04-26 13:12:45,341 INFO main iplatform.batch.ModelRunner - running in batch mode using tool configuration template: /home/balrog/repos/CloudSim/bin/configuration.txt
+2016-04-26 13:12:45,342 INFO main iplatform.batch.ModelRunner - running in batch mode using data folder name for single simulation run: DefaultModelConfigurationTemplate
+2016-04-26 13:12:45,342 INFO main iplatform.batch.ModelRunner - running in batch mode using data folder path for single simulation run: /home/balrog/repos/CloudSim/bin/batch/configurationTemplate-[cr0.0].txt
+2016-04-26 13:12:45,344 INFO main iplatform.batch.ModelRunner - reading file from location: /home/balrog/repos/CloudSim/bin/configuration.txt
+2016-04-26 13:12:45,345 INFO main iplatform.batch.ModelRunner - /* operation mode: 0 - normal, 1 - batch, 2 - replay, 3-service */{  "operationMode": 1,  "showGUI": false,  "heapSize": 2024,  "batchFolderLocation": "/home/balrog/repos/CloudSim/bin/batch",  "resultsFolderLocation": "/home/balrog/repos/CloudSim/bin/results",  "bootstrapDataFolderLocation": "/home/balrog/repos/CloudSim/bin/bootstrap",  "modelClassToInstantiate": "cs.ModelInterface",  "modelConfigurationClassToInstantiate": "cs.config.ModelConfiguration"}
+2016-04-26 13:12:45,481 INFO main iplatform.batch.ModelRunner - read model configuration: operation mode: 1 heap size: 2024
+2016-04-26 13:12:45,482 INFO main iplatform.batch.ModelRunner - Starting Simulation...
+2016-04-26 13:12:45,482 INFO main iplatform.batch.ModelRunner - initialising model...
+2016-04-26 13:12:45,483 INFO main iplatform.batch.ModelRunner - reading file from location: /home/balrog/repos/CloudSim/bin/configuration.txt
+2016-04-26 13:12:45,484 INFO main iplatform.batch.ModelRunner - /* operation mode: 0 - normal, 1 - batch, 2 - replay, 3-service */{  "operationMode": 1,  "showGUI": false,  "heapSize": 2024,  "batchFolderLocation": "/home/balrog/repos/CloudSim/bin/batch",  "resultsFolderLocation": "/home/balrog/repos/CloudSim/bin/results",  "bootstrapDataFolderLocation": "/home/balrog/repos/CloudSim/bin/bootstrap",  "modelClassToInstantiate": "cs.ModelInterface",  "modelConfigurationClassToInstantiate": "cs.config.ModelConfiguration"}
+2016-04-26 13:12:45,486 INFO main iplatform.batch.ModelRunner - read model configuration: operation mode: 1 heap size: 2024
+2016-04-26 13:12:45,487 INFO main iplatform.batch.ModelRunner - reading file from location: /home/balrog/repos/CloudSim/bin/configuration.txt
+2016-04-26 13:12:45,488 INFO main iplatform.batch.ModelRunner - /* operation mode: 0 - normal, 1 - batch, 2 - replay, 3-service */{  "operationMode": 1,  "showGUI": false,  "heapSize": 2024,  "batchFolderLocation": "/home/balrog/repos/CloudSim/bin/batch",  "resultsFolderLocation": "/home/balrog/repos/CloudSim/bin/results",  "bootstrapDataFolderLocation": "/home/balrog/repos/CloudSim/bin/bootstrap",  "modelClassToInstantiate": "cs.ModelInterface",  "modelConfigurationClassToInstantiate": "cs.config.ModelConfiguration"}
+2016-04-26 13:12:45,491 INFO main iplatform.batch.ModelRunner - read model configuration: operation mode: 1 heap size: 2024
+2016-04-26 13:12:45,494 INFO main iplatform.batch.ModelRunner - model configuration template recreated from text configuration file, template name: Default Model Configuration Template
+2016-04-26 13:12:45,497 INFO main iplatform.batch.ModelRunner - instantiating model with a given class name: cs.ModelInterface
+2016-04-26 13:12:45,501 INFO main iplatform.batch.ModelRunner - succcessfully loaded model configuration: Default Model Configuration Template
+2016-04-26 13:12:45,502 INFO main iplatform.batch.ModelRunner - successfully set simulation clock...
+2016-04-26 13:12:45,505 INFO main iplatform.batch.ModelRunner - successfully loaded simulation events...
+2016-04-26 13:12:45,505 INFO main iplatform.batch.ModelRunner - initialised model in batch mode...
+2016-04-26 13:12:45,505 INFO Thread-1 iplatform.batch.ModelRunner - ---> start simulation event triggered by simplatform clock...
+2016-04-26 13:12:45,508 INFO Thread-1 cs.dataexport.DataExport - successfully initialised data export...
+2016-04-26 13:12:45,509 INFO Thread-1 cs.dataexport.DataExport - >> ModelRunner class execution path is: /home/balrog/repos/CloudSim
+2016-04-26 13:12:45,510 INFO Thread-1 cs.dataexport.DataExport - >> bin dir path is: /home/balrog/repos/CloudSim/bin
+2016-04-26 13:12:45,511 INFO Thread-1 cs.dataexport.DataExport - >> ModelRunner class execution path is: /home/balrog/repos/CloudSim
+2016-04-26 13:12:45,512 INFO Thread-1 cs.dataexport.DataExport - >> bin dir path is: /home/balrog/repos/CloudSim/bin
+2016-04-26 13:12:45,513 INFO Thread-1 cs.dataexport.DataExport - ===> creating performance log file under following location: /home/balrog/repos/CloudSim/bin/outputServiceModelPerformance.log
+2016-04-26 13:12:45,516 INFO Thread-1 cs.bootstrap.BootstrapManager - successfully initialised bootstrap manager...
+2016-04-26 13:12:45,517 INFO Thread-1 iplatform.batch.ModelRunner - running simulation in batch mode...
+2016-04-26 13:12:45,517 INFO Thread-1 cs.bootstrap.BootstrapManager - creating consumers for short jobs: 1
+2016-04-26 13:12:45,520 INFO Thread-1 cs.bootstrap.BootstrapManager - creating consumers for long jobs: 2
+2016-04-26 13:12:45,521 INFO Thread-1 cs.bootstrap.BootstrapManager - creating providers: 1
+2016-04-26 13:12:45,605 INFO Thread-1 iplatform.batch.ModelRunner - ---> minute event triggered by simplatform clock: currentTickNumber: 600 tickTimeDuration: 100
+2016-04-26 13:12:45,606 INFO Thread-1 cs.entities.stats.PerformanceMonitor - Generating MonitEvent, currentTickNumber: 600 tickTimeDuration: 100
+2016-04-26 13:12:45,662 INFO Thread-1 iplatform.batch.ModelRunner - ---> minute event triggered by simplatform clock: currentTickNumber: 1200 tickTimeDuration: 100
+2016-04-26 13:12:45,663 INFO Thread-1 cs.entities.stats.PerformanceMonitor - Generating MonitEvent, currentTickNumber: 1200 tickTimeDuration: 100
+2016-04-26 13:12:45,708 INFO Thread-1 iplatform.batch.ModelRunner - ---> minute event triggered by simplatform clock: currentTickNumber: 1800 tickTimeDuration: 100
+2016-04-26 13:12:45,709 INFO Thread-1 cs.entities.stats.PerformanceMonitor - Generating MonitEvent, currentTickNumber: 1800 tickTimeDuration: 100
+2016-04-26 13:12:45,746 INFO Thread-1 iplatform.batch.ModelRunner - ---> minute event triggered by simplatform clock: currentTickNumber: 2400 tickTimeDuration: 100
+2016-04-26 13:12:45,747 INFO Thread-1 cs.entities.stats.PerformanceMonitor - Generating MonitEvent, currentTickNumber: 2400 tickTimeDuration: 100
+2016-04-26 13:12:45,779 INFO Thread-1 iplatform.batch.ModelRunner - ---> minute event triggered by simplatform clock: currentTickNumber: 3000 tickTimeDuration: 100
+2016-04-26 13:12:45,779 INFO Thread-1 cs.entities.stats.PerformanceMonitor - Generating MonitEvent, currentTickNumber: 3000 tickTimeDuration: 100
+2016-04-26 13:12:45,814 INFO Thread-1 iplatform.batch.ModelRunner - ---> minute event triggered by simplatform clock: currentTickNumber: 3600 tickTimeDuration: 100
+2016-04-26 13:12:45,814 INFO Thread-1 cs.entities.stats.PerformanceMonitor - Generating MonitEvent, currentTickNumber: 3600 tickTimeDuration: 100
+2016-04-26 13:12:45,844 INFO Thread-1 iplatform.batch.ModelRunner - ---> minute event triggered by simplatform clock: currentTickNumber: 4200 tickTimeDuration: 100
+2016-04-26 13:12:45,844 INFO Thread-1 cs.entities.stats.PerformanceMonitor - Generating MonitEvent, currentTickNumber: 4200 tickTimeDuration: 100
+2016-04-26 13:12:45,870 INFO Thread-1 iplatform.batch.ModelRunner - ---> minute event triggered by simplatform clock: currentTickNumber: 4800 tickTimeDuration: 100
+2016-04-26 13:12:45,871 INFO Thread-1 cs.entities.stats.PerformanceMonitor - Generating MonitEvent, currentTickNumber: 4800 tickTimeDuration: 100
+2016-04-26 13:12:45,908 INFO Thread-1 iplatform.batch.ModelRunner - ---> minute event triggered by simplatform clock: currentTickNumber: 5400 tickTimeDuration: 100
+2016-04-26 13:12:45,909 INFO Thread-1 cs.entities.stats.PerformanceMonitor - Generating MonitEvent, currentTickNumber: 5400 tickTimeDuration: 100
+2016-04-26 13:12:45,950 INFO Thread-1 iplatform.batch.ModelRunner - ---> minute event triggered by simplatform clock: currentTickNumber: 6000 tickTimeDuration: 100
+2016-04-26 13:12:45,951 INFO Thread-1 cs.entities.stats.PerformanceMonitor - Generating MonitEvent, currentTickNumber: 6000 tickTimeDuration: 100
+2016-04-26 13:12:45,977 INFO Thread-1 iplatform.batch.ModelRunner - ---> minute event triggered by simplatform clock: currentTickNumber: 6600 tickTimeDuration: 100
+2016-04-26 13:12:45,977 INFO Thread-1 cs.entities.stats.PerformanceMonitor - Generating MonitEvent, currentTickNumber: 6600 tickTimeDuration: 100
+2016-04-26 13:12:46,000 INFO Thread-1 iplatform.batch.ModelRunner - ---> minute event triggered by simplatform clock: currentTickNumber: 7200 tickTimeDuration: 100
+2016-04-26 13:12:46,001 INFO Thread-1 cs.entities.stats.PerformanceMonitor - Generating MonitEvent, currentTickNumber: 7200 tickTimeDuration: 100
+2016-04-26 13:12:46,026 INFO Thread-1 iplatform.batch.ModelRunner - ---> minute event triggered by simplatform clock: currentTickNumber: 7800 tickTimeDuration: 100
+2016-04-26 13:12:46,026 INFO Thread-1 cs.entities.stats.PerformanceMonitor - Generating MonitEvent, currentTickNumber: 7800 tickTimeDuration: 100
+2016-04-26 13:12:46,048 INFO Thread-1 iplatform.batch.ModelRunner - ---> minute event triggered by simplatform clock: currentTickNumber: 8400 tickTimeDuration: 100
+2016-04-26 13:12:46,048 INFO Thread-1 cs.entities.stats.PerformanceMonitor - Generating MonitEvent, currentTickNumber: 8400 tickTimeDuration: 100
+2016-04-26 13:12:46,071 INFO Thread-1 iplatform.batch.ModelRunner - ---> minute event triggered by simplatform clock: currentTickNumber: 9000 tickTimeDuration: 100
+2016-04-26 13:12:46,071 INFO Thread-1 cs.entities.stats.PerformanceMonitor - Generating MonitEvent, currentTickNumber: 9000 tickTimeDuration: 100
+2016-04-26 13:12:46,100 INFO Thread-1 iplatform.batch.ModelRunner - ---> minute event triggered by simplatform clock: currentTickNumber: 9600 tickTimeDuration: 100
+2016-04-26 13:12:46,100 INFO Thread-1 cs.entities.stats.PerformanceMonitor - Generating MonitEvent, currentTickNumber: 9600 tickTimeDuration: 100
+2016-04-26 13:12:46,132 INFO Thread-1 iplatform.batch.ModelRunner - ---> minute event triggered by simplatform clock: currentTickNumber: 10200 tickTimeDuration: 100
+2016-04-26 13:12:46,132 INFO Thread-1 cs.entities.stats.PerformanceMonitor - Generating MonitEvent, currentTickNumber: 10200 tickTimeDuration: 100
+2016-04-26 13:12:46,165 INFO Thread-1 iplatform.batch.ModelRunner - ---> minute event triggered by simplatform clock: currentTickNumber: 10800 tickTimeDuration: 100
+2016-04-26 13:12:46,165 INFO Thread-1 cs.entities.stats.PerformanceMonitor - Generating MonitEvent, currentTickNumber: 10800 tickTimeDuration: 100
+2016-04-26 13:12:46,197 INFO Thread-1 iplatform.batch.ModelRunner - ---> minute event triggered by simplatform clock: currentTickNumber: 11400 tickTimeDuration: 100
+2016-04-26 13:12:46,198 INFO Thread-1 cs.entities.stats.PerformanceMonitor - Generating MonitEvent, currentTickNumber: 11400 tickTimeDuration: 100
+2016-04-26 13:12:46,238 INFO Thread-1 iplatform.batch.ModelRunner - ---> minute event triggered by simplatform clock: currentTickNumber: 12000 tickTimeDuration: 100
+2016-04-26 13:12:46,238 INFO Thread-1 cs.entities.stats.PerformanceMonitor - Generating MonitEvent, currentTickNumber: 12000 tickTimeDuration: 100
+2016-04-26 13:12:46,265 INFO Thread-1 iplatform.batch.ModelRunner - ---> minute event triggered by simplatform clock: currentTickNumber: 12600 tickTimeDuration: 100
+2016-04-26 13:12:46,265 INFO Thread-1 cs.entities.stats.PerformanceMonitor - Generating MonitEvent, currentTickNumber: 12600 tickTimeDuration: 100
+2016-04-26 13:12:46,293 INFO Thread-1 iplatform.batch.ModelRunner - ---> minute event triggered by simplatform clock: currentTickNumber: 13200 tickTimeDuration: 100
+2016-04-26 13:12:46,294 INFO Thread-1 cs.entities.stats.PerformanceMonitor - Generating MonitEvent, currentTickNumber: 13200 tickTimeDuration: 100
+2016-04-26 13:12:46,316 INFO Thread-1 iplatform.batch.ModelRunner - ---> minute event triggered by simplatform clock: currentTickNumber: 13800 tickTimeDuration: 100
+2016-04-26 13:12:46,317 INFO Thread-1 cs.entities.stats.PerformanceMonitor - Generating MonitEvent, currentTickNumber: 13800 tickTimeDuration: 100
+2016-04-26 13:12:46,334 INFO Thread-1 iplatform.batch.ModelRunner - ---> minute event triggered by simplatform clock: currentTickNumber: 14400 tickTimeDuration: 100
+2016-04-26 13:12:46,334 INFO Thread-1 cs.entities.stats.PerformanceMonitor - Generating MonitEvent, currentTickNumber: 14400 tickTimeDuration: 100
+2016-04-26 13:12:46,354 INFO Thread-1 iplatform.batch.ModelRunner - ---> minute event triggered by simplatform clock: currentTickNumber: 15000 tickTimeDuration: 100
+2016-04-26 13:12:46,355 INFO Thread-1 cs.entities.stats.PerformanceMonitor - Generating MonitEvent, currentTickNumber: 15000 tickTimeDuration: 100
+2016-04-26 13:12:46,369 INFO Thread-1 iplatform.batch.ModelRunner - ---> minute event triggered by simplatform clock: currentTickNumber: 15600 tickTimeDuration: 100
+2016-04-26 13:12:46,370 INFO Thread-1 cs.entities.stats.PerformanceMonitor - Generating MonitEvent, currentTickNumber: 15600 tickTimeDuration: 100
+2016-04-26 13:12:46,382 INFO Thread-1 iplatform.batch.ModelRunner - ---> minute event triggered by simplatform clock: currentTickNumber: 16200 tickTimeDuration: 100
+2016-04-26 13:12:46,382 INFO Thread-1 cs.entities.stats.PerformanceMonitor - Generating MonitEvent, currentTickNumber: 16200 tickTimeDuration: 100
+2016-04-26 13:12:46,403 INFO Thread-1 iplatform.batch.ModelRunner - ---> minute event triggered by simplatform clock: currentTickNumber: 16800 tickTimeDuration: 100
+2016-04-26 13:12:46,404 INFO Thread-1 cs.entities.stats.PerformanceMonitor - Generating MonitEvent, currentTickNumber: 16800 tickTimeDuration: 100
+2016-04-26 13:12:46,419 INFO Thread-1 iplatform.batch.ModelRunner - ---> minute event triggered by simplatform clock: currentTickNumber: 17400 tickTimeDuration: 100
+2016-04-26 13:12:46,419 INFO Thread-1 cs.entities.stats.PerformanceMonitor - Generating MonitEvent, currentTickNumber: 17400 tickTimeDuration: 100
+2016-04-26 13:12:46,435 INFO Thread-1 iplatform.batch.ModelRunner - ---> minute event triggered by simplatform clock: currentTickNumber: 18000 tickTimeDuration: 100
+2016-04-26 13:12:46,435 INFO Thread-1 cs.entities.stats.PerformanceMonitor - Generating MonitEvent, currentTickNumber: 18000 tickTimeDuration: 100
+2016-04-26 13:12:46,452 INFO Thread-1 iplatform.batch.ModelRunner - ---> minute event triggered by simplatform clock: currentTickNumber: 18600 tickTimeDuration: 100
+2016-04-26 13:12:46,453 INFO Thread-1 cs.entities.stats.PerformanceMonitor - Generating MonitEvent, currentTickNumber: 18600 tickTimeDuration: 100
+2016-04-26 13:12:46,472 INFO Thread-1 iplatform.batch.ModelRunner - ---> minute event triggered by simplatform clock: currentTickNumber: 19200 tickTimeDuration: 100
+2016-04-26 13:12:46,473 INFO Thread-1 cs.entities.stats.PerformanceMonitor - Generating MonitEvent, currentTickNumber: 19200 tickTimeDuration: 100
+2016-04-26 13:12:46,492 INFO Thread-1 iplatform.batch.ModelRunner - ---> minute event triggered by simplatform clock: currentTickNumber: 19800 tickTimeDuration: 100
+2016-04-26 13:12:46,492 INFO Thread-1 cs.entities.stats.PerformanceMonitor - Generating MonitEvent, currentTickNumber: 19800 tickTimeDuration: 100
+2016-04-26 13:12:46,511 INFO Thread-1 iplatform.batch.ModelRunner - ---> minute event triggered by simplatform clock: currentTickNumber: 20400 tickTimeDuration: 100
+2016-04-26 13:12:46,511 INFO Thread-1 cs.entities.stats.PerformanceMonitor - Generating MonitEvent, currentTickNumber: 20400 tickTimeDuration: 100
+2016-04-26 13:12:46,530 INFO Thread-1 iplatform.batch.ModelRunner - ---> minute event triggered by simplatform clock: currentTickNumber: 21000 tickTimeDuration: 100
+2016-04-26 13:12:46,531 INFO Thread-1 cs.entities.stats.PerformanceMonitor - Generating MonitEvent, currentTickNumber: 21000 tickTimeDuration: 100
+2016-04-26 13:12:46,555 INFO Thread-1 iplatform.batch.ModelRunner - ---> minute event triggered by simplatform clock: currentTickNumber: 21600 tickTimeDuration: 100
+2016-04-26 13:12:46,556 INFO Thread-1 cs.entities.stats.PerformanceMonitor - Generating MonitEvent, currentTickNumber: 21600 tickTimeDuration: 100
+2016-04-26 13:12:46,578 INFO Thread-1 iplatform.batch.ModelRunner - ---> minute event triggered by simplatform clock: currentTickNumber: 22200 tickTimeDuration: 100
+2016-04-26 13:12:46,579 INFO Thread-1 cs.entities.stats.PerformanceMonitor - Generating MonitEvent, currentTickNumber: 22200 tickTimeDuration: 100
+2016-04-26 13:12:46,606 INFO Thread-1 iplatform.batch.ModelRunner - ---> minute event triggered by simplatform clock: currentTickNumber: 22800 tickTimeDuration: 100
+2016-04-26 13:12:46,606 INFO Thread-1 cs.entities.stats.PerformanceMonitor - Generating MonitEvent, currentTickNumber: 22800 tickTimeDuration: 100
+2016-04-26 13:12:46,631 INFO Thread-1 iplatform.batch.ModelRunner - ---> minute event triggered by simplatform clock: currentTickNumber: 23400 tickTimeDuration: 100
+2016-04-26 13:12:46,631 INFO Thread-1 cs.entities.stats.PerformanceMonitor - Generating MonitEvent, currentTickNumber: 23400 tickTimeDuration: 100
+2016-04-26 13:12:46,660 INFO Thread-1 iplatform.batch.ModelRunner - ---> minute event triggered by simplatform clock: currentTickNumber: 24000 tickTimeDuration: 100
+2016-04-26 13:12:46,660 INFO Thread-1 cs.entities.stats.PerformanceMonitor - Generating MonitEvent, currentTickNumber: 24000 tickTimeDuration: 100
+2016-04-26 13:12:46,683 INFO Thread-1 iplatform.batch.ModelRunner - ---> minute event triggered by simplatform clock: currentTickNumber: 24600 tickTimeDuration: 100
+2016-04-26 13:12:46,683 INFO Thread-1 cs.entities.stats.PerformanceMonitor - Generating MonitEvent, currentTickNumber: 24600 tickTimeDuration: 100
+2016-04-26 13:12:46,709 INFO Thread-1 iplatform.batch.ModelRunner - ---> minute event triggered by simplatform clock: currentTickNumber: 25200 tickTimeDuration: 100
+2016-04-26 13:12:46,709 INFO Thread-1 cs.entities.stats.PerformanceMonitor - Generating MonitEvent, currentTickNumber: 25200 tickTimeDuration: 100
+2016-04-26 13:12:46,735 INFO Thread-1 iplatform.batch.ModelRunner - ---> minute event triggered by simplatform clock: currentTickNumber: 25800 tickTimeDuration: 100
+2016-04-26 13:12:46,735 INFO Thread-1 cs.entities.stats.PerformanceMonitor - Generating MonitEvent, currentTickNumber: 25800 tickTimeDuration: 100
+2016-04-26 13:12:46,747 INFO Thread-1 iplatform.batch.ModelRunner - ---> minute event triggered by simplatform clock: currentTickNumber: 26400 tickTimeDuration: 100
+2016-04-26 13:12:46,747 INFO Thread-1 cs.entities.stats.PerformanceMonitor - Generating MonitEvent, currentTickNumber: 26400 tickTimeDuration: 100
+2016-04-26 13:12:46,761 INFO Thread-1 iplatform.batch.ModelRunner - ---> minute event triggered by simplatform clock: currentTickNumber: 27000 tickTimeDuration: 100
+2016-04-26 13:12:46,762 INFO Thread-1 cs.entities.stats.PerformanceMonitor - Generating MonitEvent, currentTickNumber: 27000 tickTimeDuration: 100
+2016-04-26 13:12:46,776 INFO Thread-1 iplatform.batch.ModelRunner - ---> minute event triggered by simplatform clock: currentTickNumber: 27600 tickTimeDuration: 100
+2016-04-26 13:12:46,777 INFO Thread-1 cs.entities.stats.PerformanceMonitor - Generating MonitEvent, currentTickNumber: 27600 tickTimeDuration: 100
+2016-04-26 13:12:46,793 INFO Thread-1 iplatform.batch.ModelRunner - ---> minute event triggered by simplatform clock: currentTickNumber: 28200 tickTimeDuration: 100
+2016-04-26 13:12:46,793 INFO Thread-1 cs.entities.stats.PerformanceMonitor - Generating MonitEvent, currentTickNumber: 28200 tickTimeDuration: 100
+2016-04-26 13:12:46,810 INFO Thread-1 iplatform.batch.ModelRunner - ---> minute event triggered by simplatform clock: currentTickNumber: 28800 tickTimeDuration: 100
+2016-04-26 13:12:46,810 INFO Thread-1 cs.entities.stats.PerformanceMonitor - Generating MonitEvent, currentTickNumber: 28800 tickTimeDuration: 100
+2016-04-26 13:12:46,829 INFO Thread-1 iplatform.batch.ModelRunner - ---> minute event triggered by simplatform clock: currentTickNumber: 29400 tickTimeDuration: 100
+2016-04-26 13:12:46,829 INFO Thread-1 cs.entities.stats.PerformanceMonitor - Generating MonitEvent, currentTickNumber: 29400 tickTimeDuration: 100
+2016-04-26 13:12:46,848 INFO Thread-1 iplatform.batch.ModelRunner - ---> minute event triggered by simplatform clock: currentTickNumber: 30000 tickTimeDuration: 100
+2016-04-26 13:12:46,849 INFO Thread-1 cs.entities.stats.PerformanceMonitor - Generating MonitEvent, currentTickNumber: 30000 tickTimeDuration: 100
+2016-04-26 13:12:46,866 INFO Thread-1 iplatform.batch.ModelRunner - ---> minute event triggered by simplatform clock: currentTickNumber: 30600 tickTimeDuration: 100
+2016-04-26 13:12:46,866 INFO Thread-1 cs.entities.stats.PerformanceMonitor - Generating MonitEvent, currentTickNumber: 30600 tickTimeDuration: 100
+2016-04-26 13:12:46,883 INFO Thread-1 iplatform.batch.ModelRunner - ---> minute event triggered by simplatform clock: currentTickNumber: 31200 tickTimeDuration: 100
+2016-04-26 13:12:46,883 INFO Thread-1 cs.entities.stats.PerformanceMonitor - Generating MonitEvent, currentTickNumber: 31200 tickTimeDuration: 100
+2016-04-26 13:12:46,901 INFO Thread-1 iplatform.batch.ModelRunner - ---> minute event triggered by simplatform clock: currentTickNumber: 31800 tickTimeDuration: 100
+2016-04-26 13:12:46,902 INFO Thread-1 cs.entities.stats.PerformanceMonitor - Generating MonitEvent, currentTickNumber: 31800 tickTimeDuration: 100
+2016-04-26 13:12:46,922 INFO Thread-1 iplatform.batch.ModelRunner - ---> minute event triggered by simplatform clock: currentTickNumber: 32400 tickTimeDuration: 100
+2016-04-26 13:12:46,922 INFO Thread-1 cs.entities.stats.PerformanceMonitor - Generating MonitEvent, currentTickNumber: 32400 tickTimeDuration: 100
+2016-04-26 13:12:46,943 INFO Thread-1 iplatform.batch.ModelRunner - ---> minute event triggered by simplatform clock: currentTickNumber: 33000 tickTimeDuration: 100
+2016-04-26 13:12:46,943 INFO Thread-1 cs.entities.stats.PerformanceMonitor - Generating MonitEvent, currentTickNumber: 33000 tickTimeDuration: 100
+2016-04-26 13:12:46,967 INFO Thread-1 iplatform.batch.ModelRunner - ---> minute event triggered by simplatform clock: currentTickNumber: 33600 tickTimeDuration: 100
+2016-04-26 13:12:46,967 INFO Thread-1 cs.entities.stats.PerformanceMonitor - Generating MonitEvent, currentTickNumber: 33600 tickTimeDuration: 100
+2016-04-26 13:12:46,990 INFO Thread-1 iplatform.batch.ModelRunner - ---> minute event triggered by simplatform clock: currentTickNumber: 34200 tickTimeDuration: 100
+2016-04-26 13:12:46,990 INFO Thread-1 cs.entities.stats.PerformanceMonitor - Generating MonitEvent, currentTickNumber: 34200 tickTimeDuration: 100
+2016-04-26 13:12:47,011 INFO Thread-1 iplatform.batch.ModelRunner - ---> minute event triggered by simplatform clock: currentTickNumber: 34800 tickTimeDuration: 100
+2016-04-26 13:12:47,012 INFO Thread-1 cs.entities.stats.PerformanceMonitor - Generating MonitEvent, currentTickNumber: 34800 tickTimeDuration: 100
+2016-04-26 13:12:47,027 INFO Thread-1 iplatform.batch.ModelRunner - ---> minute event triggered by simplatform clock: currentTickNumber: 35400 tickTimeDuration: 100
+2016-04-26 13:12:47,027 INFO Thread-1 cs.entities.stats.PerformanceMonitor - Generating MonitEvent, currentTickNumber: 35400 tickTimeDuration: 100
+2016-04-26 13:12:47,044 INFO Thread-1 iplatform.batch.ModelRunner - ---> minute event triggered by simplatform clock: currentTickNumber: 36000 tickTimeDuration: 100
+2016-04-26 13:12:47,045 INFO Thread-1 cs.entities.stats.PerformanceMonitor - Generating MonitEvent, currentTickNumber: 36000 tickTimeDuration: 100
+2016-04-26 13:12:47,045 INFO Thread-1 iplatform.batch.ModelRunner - stopping batch mode run as simulation end time condition was reached...
+2016-04-26 13:12:47,045 INFO Thread-1 iplatform.batch.ModelRunner - ---> end simulation event triggered by simplatform clock...
+2016-04-26 13:12:47,045 INFO Thread-1 iplatform.batch.ModelRunner - ============================== consumer stats ====================================
+2016-04-26 13:12:47,046 INFO Thread-1 iplatform.batch.ModelRunner - Consumer stats at tick: 600 queued jobs: 116 completed jobs: 27
+2016-04-26 13:12:47,046 INFO Thread-1 iplatform.batch.ModelRunner - Consumer stats at tick: 1200 queued jobs: 123 completed jobs: 27
+2016-04-26 13:12:47,046 INFO Thread-1 iplatform.batch.ModelRunner - Consumer stats at tick: 1800 queued jobs: 129 completed jobs: 28
+2016-04-26 13:12:47,047 INFO Thread-1 iplatform.batch.ModelRunner - Consumer stats at tick: 2400 queued jobs: 124 completed jobs: 19
+2016-04-26 13:12:47,047 INFO Thread-1 iplatform.batch.ModelRunner - Consumer stats at tick: 3000 queued jobs: 118 completed jobs: 29
+2016-04-26 13:12:47,047 INFO Thread-1 iplatform.batch.ModelRunner - Consumer stats at tick: 3600 queued jobs: 135 completed jobs: 23
+2016-04-26 13:12:47,047 INFO Thread-1 iplatform.batch.ModelRunner - Consumer stats at tick: 4200 queued jobs: 121 completed jobs: 19
+2016-04-26 13:12:47,048 INFO Thread-1 iplatform.batch.ModelRunner - Consumer stats at tick: 4800 queued jobs: 124 completed jobs: 22
+2016-04-26 13:12:47,048 INFO Thread-1 iplatform.batch.ModelRunner - Consumer stats at tick: 5400 queued jobs: 133 completed jobs: 27
+2016-04-26 13:12:47,048 INFO Thread-1 iplatform.batch.ModelRunner - Consumer stats at tick: 6000 queued jobs: 141 completed jobs: 24
+2016-04-26 13:12:47,049 INFO Thread-1 iplatform.batch.ModelRunner - Consumer stats at tick: 6600 queued jobs: 126 completed jobs: 31
+2016-04-26 13:12:47,049 INFO Thread-1 iplatform.batch.ModelRunner - Consumer stats at tick: 7200 queued jobs: 116 completed jobs: 23
+2016-04-26 13:12:47,049 INFO Thread-1 iplatform.batch.ModelRunner - Consumer stats at tick: 7800 queued jobs: 124 completed jobs: 22
+2016-04-26 13:12:47,049 INFO Thread-1 iplatform.batch.ModelRunner - Consumer stats at tick: 8400 queued jobs: 130 completed jobs: 19
+2016-04-26 13:12:47,050 INFO Thread-1 iplatform.batch.ModelRunner - Consumer stats at tick: 9000 queued jobs: 147 completed jobs: 23
+2016-04-26 13:12:47,050 INFO Thread-1 iplatform.batch.ModelRunner - Consumer stats at tick: 9600 queued jobs: 125 completed jobs: 24
+2016-04-26 13:12:47,050 INFO Thread-1 iplatform.batch.ModelRunner - Consumer stats at tick: 10200 queued jobs: 146 completed jobs: 26
+2016-04-26 13:12:47,051 INFO Thread-1 iplatform.batch.ModelRunner - Consumer stats at tick: 10800 queued jobs: 144 completed jobs: 27
+2016-04-26 13:12:47,051 INFO Thread-1 iplatform.batch.ModelRunner - Consumer stats at tick: 11400 queued jobs: 134 completed jobs: 31
+2016-04-26 13:12:47,051 INFO Thread-1 iplatform.batch.ModelRunner - Consumer stats at tick: 12000 queued jobs: 136 completed jobs: 22
+2016-04-26 13:12:47,052 INFO Thread-1 iplatform.batch.ModelRunner - Consumer stats at tick: 12600 queued jobs: 122 completed jobs: 22
+2016-04-26 13:12:47,052 INFO Thread-1 iplatform.batch.ModelRunner - Consumer stats at tick: 13200 queued jobs: 134 completed jobs: 27
+2016-04-26 13:12:47,052 INFO Thread-1 iplatform.batch.ModelRunner - Consumer stats at tick: 13800 queued jobs: 137 completed jobs: 23
+2016-04-26 13:12:47,052 INFO Thread-1 iplatform.batch.ModelRunner - Consumer stats at tick: 14400 queued jobs: 116 completed jobs: 27
+2016-04-26 13:12:47,053 INFO Thread-1 iplatform.batch.ModelRunner - Consumer stats at tick: 15000 queued jobs: 146 completed jobs: 24
+2016-04-26 13:12:47,053 INFO Thread-1 iplatform.batch.ModelRunner - Consumer stats at tick: 15600 queued jobs: 119 completed jobs: 25
+2016-04-26 13:12:47,053 INFO Thread-1 iplatform.batch.ModelRunner - Consumer stats at tick: 16200 queued jobs: 111 completed jobs: 24
+2016-04-26 13:12:47,054 INFO Thread-1 iplatform.batch.ModelRunner - Consumer stats at tick: 16800 queued jobs: 143 completed jobs: 22
+2016-04-26 13:12:47,054 INFO Thread-1 iplatform.batch.ModelRunner - Consumer stats at tick: 17400 queued jobs: 135 completed jobs: 23
+2016-04-26 13:12:47,054 INFO Thread-1 iplatform.batch.ModelRunner - Consumer stats at tick: 18000 queued jobs: 134 completed jobs: 24
+2016-04-26 13:12:47,054 INFO Thread-1 iplatform.batch.ModelRunner - Consumer stats at tick: 18600 queued jobs: 142 completed jobs: 28
+2016-04-26 13:12:47,055 INFO Thread-1 iplatform.batch.ModelRunner - Consumer stats at tick: 19200 queued jobs: 153 completed jobs: 22
+2016-04-26 13:12:47,055 INFO Thread-1 iplatform.batch.ModelRunner - Consumer stats at tick: 19800 queued jobs: 139 completed jobs: 29
+2016-04-26 13:12:47,055 INFO Thread-1 iplatform.batch.ModelRunner - Consumer stats at tick: 20400 queued jobs: 129 completed jobs: 22
+2016-04-26 13:12:47,056 INFO Thread-1 iplatform.batch.ModelRunner - Consumer stats at tick: 21000 queued jobs: 127 completed jobs: 28
+2016-04-26 13:12:47,056 INFO Thread-1 iplatform.batch.ModelRunner - Consumer stats at tick: 21600 queued jobs: 141 completed jobs: 26
+2016-04-26 13:12:47,056 INFO Thread-1 iplatform.batch.ModelRunner - Consumer stats at tick: 22200 queued jobs: 128 completed jobs: 22
+2016-04-26 13:12:47,057 INFO Thread-1 iplatform.batch.ModelRunner - Consumer stats at tick: 22800 queued jobs: 134 completed jobs: 30
+2016-04-26 13:12:47,057 INFO Thread-1 iplatform.batch.ModelRunner - Consumer stats at tick: 23400 queued jobs: 142 completed jobs: 27
+2016-04-26 13:12:47,057 INFO Thread-1 iplatform.batch.ModelRunner - Consumer stats at tick: 24000 queued jobs: 141 completed jobs: 25
+2016-04-26 13:12:47,057 INFO Thread-1 iplatform.batch.ModelRunner - Consumer stats at tick: 24600 queued jobs: 136 completed jobs: 22
+2016-04-26 13:12:47,058 INFO Thread-1 iplatform.batch.ModelRunner - Consumer stats at tick: 25200 queued jobs: 132 completed jobs: 23
+2016-04-26 13:12:47,058 INFO Thread-1 iplatform.batch.ModelRunner - Consumer stats at tick: 25800 queued jobs: 135 completed jobs: 21
+2016-04-26 13:12:47,058 INFO Thread-1 iplatform.batch.ModelRunner - Consumer stats at tick: 26400 queued jobs: 121 completed jobs: 23
+2016-04-26 13:12:47,058 INFO Thread-1 iplatform.batch.ModelRunner - Consumer stats at tick: 27000 queued jobs: 136 completed jobs: 24
+2016-04-26 13:12:47,059 INFO Thread-1 iplatform.batch.ModelRunner - Consumer stats at tick: 27600 queued jobs: 129 completed jobs: 20
+2016-04-26 13:12:47,059 INFO Thread-1 iplatform.batch.ModelRunner - Consumer stats at tick: 28200 queued jobs: 131 completed jobs: 27
+2016-04-26 13:12:47,059 INFO Thread-1 iplatform.batch.ModelRunner - Consumer stats at tick: 28800 queued jobs: 131 completed jobs: 22
+2016-04-26 13:12:47,059 INFO Thread-1 iplatform.batch.ModelRunner - Consumer stats at tick: 29400 queued jobs: 142 completed jobs: 29
+2016-04-26 13:12:47,059 INFO Thread-1 iplatform.batch.ModelRunner - Consumer stats at tick: 30000 queued jobs: 141 completed jobs: 25
+2016-04-26 13:12:47,059 INFO Thread-1 iplatform.batch.ModelRunner - Consumer stats at tick: 30600 queued jobs: 128 completed jobs: 26
+2016-04-26 13:12:47,060 INFO Thread-1 iplatform.batch.ModelRunner - Consumer stats at tick: 31200 queued jobs: 119 completed jobs: 20
+2016-04-26 13:12:47,060 INFO Thread-1 iplatform.batch.ModelRunner - Consumer stats at tick: 31800 queued jobs: 128 completed jobs: 23
+2016-04-26 13:12:47,060 INFO Thread-1 iplatform.batch.ModelRunner - Consumer stats at tick: 32400 queued jobs: 135 completed jobs: 21
+2016-04-26 13:12:47,060 INFO Thread-1 iplatform.batch.ModelRunner - Consumer stats at tick: 33000 queued jobs: 130 completed jobs: 28
+2016-04-26 13:12:47,060 INFO Thread-1 iplatform.batch.ModelRunner - Consumer stats at tick: 33600 queued jobs: 153 completed jobs: 30
+2016-04-26 13:12:47,061 INFO Thread-1 iplatform.batch.ModelRunner - Consumer stats at tick: 34200 queued jobs: 135 completed jobs: 27
+2016-04-26 13:12:47,061 INFO Thread-1 iplatform.batch.ModelRunner - Consumer stats at tick: 34800 queued jobs: 114 completed jobs: 21
+2016-04-26 13:12:47,061 INFO Thread-1 iplatform.batch.ModelRunner - Consumer stats at tick: 35400 queued jobs: 127 completed jobs: 27
+2016-04-26 13:12:47,061 INFO Thread-1 iplatform.batch.ModelRunner - Consumer stats at tick: 36000 queued jobs: 125 completed jobs: 24
+2016-04-26 13:12:47,063 INFO Thread-1 cs.dataexport.ExportManager - export manager initialised...
+2016-04-26 13:12:47,064 INFO Thread-1 cs.dataexport.ExportManager - verifying if results folder exists...
+2016-04-26 13:12:47,064 INFO Thread-1 cs.dataexport.ExportManager - verifying if results folder exists...
+2016-04-26 13:12:47,065 INFO Thread-1 cs.dataexport.ExportManager - creating export directory: /home/balrog/repos/CloudSim/bin/results/DefaultModelConfigurationTemplate/2016-04-26-13-12-47
+2016-04-26 13:12:47,066 INFO Thread-1 cs.dataexport.ExportManager - export path is: /home/balrog/repos/CloudSim/bin/results/DefaultModelConfigurationTemplate/2016-04-26-13-12-47
+2016-04-26 13:12:47,067 INFO Thread-1 cs.dataexport.ExportManager - copying file: outputServiceModelPerformance.log to following location (in bin directory: /home/balrog/repos/CloudSim/bin/results/DefaultModelConfigurationTemplate/2016-04-26-13-12-47/outputServiceModelPerformance.log
+2016-04-26 13:12:47,068 INFO Thread-1 cs.dataexport.ExportManager - >> ModelRunner class execution path is: /home/balrog/repos/CloudSim
+2016-04-26 13:12:47,069 INFO Thread-1 cs.dataexport.ExportManager - >> bin dir path is: /home/balrog/repos/bin
+2016-04-26 13:12:47,069 ERROR Thread-1 cs.dataexport.ExportManager - java.lang.IllegalArgumentException: Delete: no such file or directory: /home/balrog/repos/bin/outputServiceModelPerformance.log
+2016-04-26 13:12:47,069 INFO Thread-1 cs.dataexport.ExportManager - copying file: outputModelLogs.log to following location (in bin directory: /home/balrog/repos/CloudSim/bin/results/DefaultModelConfigurationTemplate/2016-04-26-13-12-47/outputModelLogs.log
