@@ -34,7 +34,6 @@ public class ModelInterface extends SimulationModelSchema implements IPlatformSe
 	//this is class used to configure the model
 	private ModelConfiguration modelConfiguration = null;
 	private DataExport dataExport = null;
-	
 	//simulation management objects
 	private BootstrapManager managerBootstrap = null;
 	private List<ConsumerInt> listConsumersShortJobs = null;
