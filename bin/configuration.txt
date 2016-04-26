@@ -1,0 +1,11 @@
+/* operation mode: 0 - normal, 1 - batch, 2 - replay, 3-service */
+{
+  "operationMode": 1,
+  "showGUI": false,
+  "heapSize": 2024,
+  "batchFolderLocation": "/home/balrog/repos/CloudSim/bin/batch",
+  "resultsFolderLocation": "/home/balrog/repos/CloudSim/bin/results",
+  "bootstrapDataFolderLocation": "/home/balrog/repos/CloudSim/bin/bootstrap",
+  "modelClassToInstantiate": "cs.ModelInterface",
+  "modelConfigurationClassToInstantiate": "cs.config.ModelConfiguration"
+}

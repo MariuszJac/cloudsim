@@ -1,0 +1,18 @@
+{
+  "historyDataSnapshotDurationInDays": 30,
+  "historyDataStartPeriod": "01/01/2010",
+  "historyDataEndPeriod": "01/02/2010",
+  "tresholdNumberOfThreadsToAnswer": 10,
+  "behaviouralRule1Active": false,
+  "initialiseWithUnansweredThreadsFromHistoryData": true,
+  "unresolvedThreadExpiryDays": 30,
+  "threadReplyRatioUpdate": 1.0,
+  "threadCreationRatioUpdate": 1.0,
+  "percentageOfTopLevelContributorsToRemove": 0.0,
+  "enableGraphVisualisation": false,
+  "templateName": "DefaultModelConfigurationTemplate",
+  "numberOfSimulationRepetitions": 1,
+  "useCurrentTimeAsStartDate": false,
+  "numberOfSimulationDays": 0,
+  "jobRefId": ""
+}

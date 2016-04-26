@@ -1,0 +1,12 @@
+{
+  "operationMode": 3,
+  "showGUI": false,
+  "heapSize": 1024,
+  "batchFolderLocation": "bin\\batch",
+  "resultsFolderLocation": "bin\\results",
+  "bootstrapDataFolderLocation": "bin\\bootstrap",
+  "modelClassToInstantiate": "uk.ac.soton.itinnovation.robust.catsim.ModelInterface",
+  "modelConfigurationClassToInstantiate": "uk.ac.soton.itinnovation.robust.catsim.config.ModelConfiguration",
+  "simulationResultsClassToInstantiate": "uk.ac.soton.itinnovation.robust.catsim.config.SimulationResults",
+  "simulationResultsFileName": "simulationGeneratedResults.txt"
+}
