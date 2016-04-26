@@ -15,8 +15,15 @@ public class Job {
 	private int jobExecutionStartTickNumber;
 	private int jobExecutionEndTickNumber;
 
+	private boolean shortJob = false;
 	private boolean scheduled = false;
 	private boolean executed = false;
+
+	public Job(int id, boolean shortJob) {
+		super();
+		this.id = id;
+		this.shortJob = shortJob;
+	}
 
 	public Job(int id, ConsumerInt consumer) {
 		super();
@@ -177,5 +184,12 @@ public class Job {
 		this.scheduled = scheduled;
 	}
 
+	public boolean isShortJob() {
+		return shortJob;
+	}
+
+	public void setShortJob(boolean shortJob) {
+		this.shortJob = shortJob;
+	}
 	
 }

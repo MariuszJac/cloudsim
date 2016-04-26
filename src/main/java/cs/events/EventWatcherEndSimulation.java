@@ -69,7 +69,12 @@ public class EventWatcherEndSimulation implements SimulationClockEvent{
 		logger.info("============================== consumer stats ====================================");
 		for(int i=0;i<listConsumerStatsEvent.size();i++) {
 			ConsumerStatsEvent event = listConsumerStatsEvent.get(i);
-			logger.info("Consumer stats at tick: "+event.getTickNumber()+ " queued jobs: "+event.getNumberOfQueuedJobs()+" completed jobs: "+event.getNumberOfCompletedJobs());
+			logger.info("tick: "+event.getTickNumber()+ 
+					" S["+event.getNumberOfQueuedShortJobs()+
+					":"+event.getNumberOfCompletedShortJobs()+"]"+
+					" L["+event.getNumberOfQueuedLongJobs()+
+					":"+event.getNumberOfCompletedLongJobs()+"]"
+					);
 		}
 	}
 	

@@ -40,8 +40,32 @@ public class PerformanceMonitor {
 		ConsumerStatsEvent statsEvent = new ConsumerStatsEvent();
 		statsEvent.setTickNumber(currentSimulationTick);
 		statsEvent.setTickTimeDuration(tickTimeDuration);
-		statsEvent.setNumberOfQueuedJobs(listQueuedJobs.size());
-		statsEvent.setNumberOfCompletedJobs(listCompletedJobs.size());
+		
+		//calculate number of queued jobs per job type
+		int numberOfQueuedShortJobs = 0;
+		int numberOfQueuedLongJobs = 0;
+		for(int i=0;i<listQueuedJobs.size();i++) {
+			if(listQueuedJobs.get(i).isShortJob()) {
+				numberOfQueuedShortJobs++;
+			} else {
+				numberOfQueuedLongJobs++;
+			}
+		}	
+		statsEvent.setNumberOfQueuedShortJobs(numberOfQueuedShortJobs);
+		statsEvent.setNumberOfQueuedLongJobs(numberOfQueuedLongJobs);
+
+		//calculate number of completed jobs per job type
+		int numberOfCompletedShortJobs = 0;
+		int numberOfCompletedLongJobs = 0;
+		for(int i=0;i<listCompletedJobs.size();i++) {
+			if(listCompletedJobs.get(i).isShortJob()) {
+				numberOfCompletedShortJobs++;
+			} else {
+				numberOfCompletedLongJobs++;
+			}
+		}	
+		statsEvent.setNumberOfCompletedShortJobs(numberOfCompletedShortJobs);
+		statsEvent.setNumberOfCompletedLongJobs(numberOfCompletedLongJobs);
 		
 		listConsumerStatsEvent.add(statsEvent);
 		//clear the list

@@ -3,8 +3,13 @@ package cs.entities.stats;
 public class ConsumerStatsEvent {
 	private int tickNumber;
 	private int tickTimeDuration;
-	private int numberOfQueuedJobs;
-	private int numberOfCompletedJobs;
+	//for short jobs
+	private int numberOfQueuedShortJobs;
+	private int numberOfCompletedShortJobs;
+	//for short jobs
+	private int numberOfQueuedLongJobs;
+	private int numberOfCompletedLongJobs;
+	
 	public int getTickNumber() {
 		return tickNumber;
 	}
@@ -18,17 +23,28 @@ public class ConsumerStatsEvent {
 	public void setTickTimeDuration(int tickTimeDuration) {
 		this.tickTimeDuration = tickTimeDuration;
 	}
-	public int getNumberOfCompletedJobs() {
-		return numberOfCompletedJobs;
+	public int getNumberOfQueuedShortJobs() {
+		return numberOfQueuedShortJobs;
 	}
-	public void setNumberOfCompletedJobs(int numberOfCompletedJobs) {
-		this.numberOfCompletedJobs = numberOfCompletedJobs;
+	public void setNumberOfQueuedShortJobs(int numberOfQueuedShortJobs) {
+		this.numberOfQueuedShortJobs = numberOfQueuedShortJobs;
 	}
-	public int getNumberOfQueuedJobs() {
-		return numberOfQueuedJobs;
+	public int getNumberOfCompletedShortJobs() {
+		return numberOfCompletedShortJobs;
 	}
-	public void setNumberOfQueuedJobs(int numberOfQueuedJobs) {
-		this.numberOfQueuedJobs = numberOfQueuedJobs;
+	public void setNumberOfCompletedShortJobs(int numberOfCompletedShortJobs) {
+		this.numberOfCompletedShortJobs = numberOfCompletedShortJobs;
 	}
-	
+	public int getNumberOfQueuedLongJobs() {
+		return numberOfQueuedLongJobs;
+	}
+	public void setNumberOfQueuedLongJobs(int numberOfQueuedLongJobs) {
+		this.numberOfQueuedLongJobs = numberOfQueuedLongJobs;
+	}
+	public int getNumberOfCompletedLongJobs() {
+		return numberOfCompletedLongJobs;
+	}
+	public void setNumberOfCompletedLongJobs(int numberOfCompletedLongJobs) {
+		this.numberOfCompletedLongJobs = numberOfCompletedLongJobs;
+	}
 }
