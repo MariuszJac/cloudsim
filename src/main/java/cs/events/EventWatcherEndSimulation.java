@@ -107,11 +107,11 @@ public class EventWatcherEndSimulation implements SimulationClockEvent{
 		ArrayList<Job> allCompletedJobs = modelInterface.getPerformanceMonitor().getListAllCompletedJobs();
 		for(int x=0;x<allCompletedJobs.size();x++){
 			Job job = allCompletedJobs.get(x);
-			logger.info("QP: "+job.getJobQueuePlacementTickNumber()+
-			" SS: "+job.getJobSchedulingStartTickNumber()+" SE: "+job.getJobSchedulingEndTickNumber()+
-			" ES: "+job.getJobExecutionStartTickNumber()+" EE: "+job.getJobExecutionEndTickNumber()+
-			" StartExec: "+job.getTicksItTakesToStartExecution() +
-			" EndExec: "+job.getTicksItTakesToEndExecution()
+			logger.info(
+			" TicksInQueue: "+job.getTicksItTakesToStartScheduling()+
+			" TicksToStartExec: "+job.getTicksItTakesToStartExecution() +
+			" TicksToEndExec: "+job.getTicksItTakesToEndExecution()+ 
+			" Minimal: "+job.getMinimalTicksToExecuteJob()
 			);
 		}
 	}

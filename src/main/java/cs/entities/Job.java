@@ -97,6 +97,20 @@ public class Job {
 		return ticksNumber;
 	}
 
+	public int getMinimalTicksToExecuteJob() { //assuming all tasks take equal time to place and execute and are executed in parallel
+		int ticksNumber = 0;
+		for(int i=0;i< listTasks.size();i++) {
+			Task task = listTasks.get(i);
+			int numberOfTicksToFinishTask = (
+					task.getTaskSchedulingTimeMilliSeconds()+
+					task.getTaskExecutionTimeMilliSeconds()+
+					task.getTaskPlacementTimeMilliSeconds())/100;
+			ticksNumber = ticksNumber + numberOfTicksToFinishTask;
+			break;
+		}
+		return ticksNumber;
+	}
+
 	public int getId() {
 		return id;
 	}

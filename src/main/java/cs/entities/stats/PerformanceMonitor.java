@@ -108,13 +108,13 @@ public class PerformanceMonitor {
 				ticksItTakesToStartSchedulingForShortJob = ticksItTakesToStartSchedulingForShortJob + completedJob.getTicksItTakesToStartScheduling();
 				ticksItTakesToScheduleForShortJob = ticksItTakesToScheduleForShortJob + completedJob.getTicksItTakesToSchedule();
 				ticksItTakesToStartExecutionForShortJob = ticksItTakesToStartExecutionForShortJob + completedJob.getTicksItTakesToStartExecution();
-				ticksToExecuteJobForShortJob = ticksToExecuteJobForShortJob + completedJob.getTotalTicksToExecuteJob();
+				ticksToExecuteJobForShortJob = ticksToExecuteJobForShortJob + completedJob.getTicksItTakesToEndExecution();
 				completedShortJobsCounter++;
 			} else {
 				ticksItTakesToStartSchedulingForLongJob = ticksItTakesToStartSchedulingForLongJob + completedJob.getTicksItTakesToStartScheduling();
 				ticksItTakesToScheduleForLongJob = ticksItTakesToScheduleForLongJob + completedJob.getTicksItTakesToSchedule();
 				ticksItTakesToStartExecutionForLongJob = ticksItTakesToStartExecutionForLongJob + completedJob.getTicksItTakesToStartExecution();
-				ticksToExecuteJobForLongJob = ticksToExecuteJobForLongJob + completedJob.getTotalTicksToExecuteJob();
+				ticksToExecuteJobForLongJob = ticksToExecuteJobForLongJob + completedJob.getTicksItTakesToEndExecution();
 				completedLongJobsCounter++;
 			}
 		}
