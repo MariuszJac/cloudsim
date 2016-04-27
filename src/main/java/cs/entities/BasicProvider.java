@@ -94,6 +94,9 @@ public class BasicProvider implements ProviderInt {
 						currentlyExecutedTask.getTaskPlacementTimeMilliSeconds())/tickTimeDuration;
 				currentlyExecutedTask.setNumberOfTicksToFinishTask(numberOfTicksToFinishTask);
 				currentlyExecutedTask.setTaskExecutionStartTickNumber(currentSimulationTick);
+				if(currentlyExecutedTask.getJob().getJobExecutionStartTickNumber()==-1) { //set job execution start tick number
+					currentlyExecutedTask.getJob().setJobExecutionStartTickNumber(currentSimulationTick);
+				}
 				isTaskExecutionComplete = currentlyExecutedTask.executeTask();
 				logger.debug(getLogEntry(currentSimulationTick)+" starting execution of task: "+currentlyExecutedTask.getId()+" ticks to finish task: "+numberOfTicksToFinishTask);
 			} else {

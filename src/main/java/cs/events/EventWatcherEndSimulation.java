@@ -33,6 +33,7 @@ import cs.ModelInterface;
 import cs.config.ModelConfiguration;
 import cs.dataexport.DataExport;
 import cs.dataexport.ExportManager;
+import cs.entities.Job;
 import cs.entities.stats.ConsumerStatsEvent;
 import cs.entities.stats.JobStatsEvent;
 
@@ -53,19 +54,7 @@ public class EventWatcherEndSimulation implements SimulationClockEvent{
 		this.modelConfiguration = modelInterface.getModelConfiguration();
 	}
 	
-	@Override
-	public void triggerEvent() {
-		logger.info("---> end simulation event triggered by simplatform clock...");
-		
-		exportPerformanceStats();
-		
-		exportSimulationLogs();
-		
-		//exit the simulation as we received end simulation call
-		System.exit(0);
-	}
-
-	private void exportPerformanceStats(){
+	private void exportPerformanceStats(int tickNumber, int tickTimeDurationInMilliseconds){
 		logger.info("============================== consumer stats ====================================");
 		ArrayList<ConsumerStatsEvent> listConsumerStatsEvent = modelInterface.getPerformanceMonitor().getListConsumerStatsEvent();
 		int totalQueuedShortJobs = 0;
@@ -92,19 +81,39 @@ public class EventWatcherEndSimulation implements SimulationClockEvent{
 				":"+totalCompletedLongJobs+"]"
 				);
 		
-		/*
 		logger.info("============================== job stats ====================================");
+		//first generate stats
+		modelInterface.getPerformanceMonitor().generateJobsMonitEvent(tickNumber, tickTimeDurationInMilliseconds);
 		ArrayList<JobStatsEvent> listJobStatsEvent = modelInterface.getPerformanceMonitor().getListJobStatsEvent();
 		for(int i=0;i<listJobStatsEvent.size();i++) {
 			JobStatsEvent event = listJobStatsEvent.get(i);
 			logger.info("tick: "+event.getTickNumber()+ 
-					" consumer queue["+event.getTicksWaitingInQueueTime()+"]" +
-					" schedule["+event.getTicksSchedulingTime()+"]"+
-					" start processing["+event.getTicksStartExecutionTime()+"]"+
-					" processing["+event.getTicksProcessingTime()+"]"
+					" SHORT queue["+event.getTicksWaitingInQueueTimeForShortJob()+"]" +
+					" schedule["+event.getTicksSchedulingTimeForShortJob()+"]"+
+					" start processing["+event.getTicksStartExecutionTimeForShortJob()+"]"+
+					" processing["+event.getTicksProcessingTimeForShortJob()+"]"+
+					" completed["+event.getCompletedShortJobsCounter()+"]"
+					);
+			logger.info("tick: "+event.getTickNumber()+ 
+					" LONG queue["+event.getTicksWaitingInQueueTimeForLongJob()+"]" +
+					" schedule["+event.getTicksSchedulingTimeForLongJob()+"]"+
+					" start processing["+event.getTicksStartExecutionTimeForLongJob()+"]"+
+					" processing["+event.getTicksProcessingTimeForLongJob()+"]"+
+					" completed["+event.getCompletedLongJobsCounter()+"]"
+
 					);
 		}
-		*/
+		//list all jobs stats
+		ArrayList<Job> allCompletedJobs = modelInterface.getPerformanceMonitor().getListAllCompletedJobs();
+		for(int x=0;x<allCompletedJobs.size();x++){
+			Job job = allCompletedJobs.get(x);
+			logger.info("QP: "+job.getJobQueuePlacementTickNumber()+
+			" SS: "+job.getJobSchedulingStartTickNumber()+" SE: "+job.getJobSchedulingEndTickNumber()+
+			" ES: "+job.getJobExecutionStartTickNumber()+" EE: "+job.getJobExecutionEndTickNumber()+
+			" StartExec: "+job.getTicksItTakesToStartExecution() +
+			" EndExec: "+job.getTicksItTakesToEndExecution()
+			);
+		}
 	}
 	
 	//finalise any necessary actions to export the simulation logs
@@ -132,8 +141,15 @@ public class EventWatcherEndSimulation implements SimulationClockEvent{
 
 	@Override
 	public void triggerEvent(int tickNumber, int tickTimeDurationInMilliseconds) {
-		// TODO Auto-generated method stub
-		
+		exportPerformanceStats(tickNumber, tickTimeDurationInMilliseconds);
+		exportSimulationLogs();
+		//exit the simulation as we received end simulation call
+		System.exit(0);
+	}
+
+	@Override
+	public void triggerEvent() {
+		logger.info("---> end simulation event triggered by simplatform clock...");
 	}
 
 }

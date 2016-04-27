@@ -156,7 +156,7 @@ public class SimulationClock extends Thread {
 
 			if (stopBatchSimulation()) {
 				logger.info("stopping batch mode run as simulation end time condition was reached...");
-				fireEndSimulationEvent();
+				fireEndSimulationEvent(currentSimulationTick, realTickTimeDuration);
 			}
 
 			//sleep(tickDelay);
@@ -173,10 +173,10 @@ public class SimulationClock extends Thread {
 		}
 	}
 
-	private void fireEndSimulationEvent() {
+	private void fireEndSimulationEvent(int tickNumber, int tickTimeDurationInMilliseconds) {
 		//logger.debug("firing end simulation events...");
 		for (SimulationClockEvent event : registeredEndSimulationEvents) {
-			event.triggerEvent();
+			event.triggerEvent(tickNumber, tickTimeDurationInMilliseconds);
 		}
 	}
 

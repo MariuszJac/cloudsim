@@ -12,7 +12,7 @@ public class Job {
 	private int jobQueuePlacementTickNumber;
 	private int jobSchedulingStartTickNumber;
 	private int jobSchedulingEndTickNumber;
-	private int jobExecutionStartTickNumber;
+	private int jobExecutionStartTickNumber=-1; //default value if it is unset
 	private int jobExecutionEndTickNumber;
 
 	private boolean shortJob = false;
@@ -62,7 +62,14 @@ public class Job {
 	 * ticks it takes to start job for execution (between queue placement - end of scheduling)
 	 */
 	public int getTicksItTakesToStartExecution() {
-		return jobSchedulingEndTickNumber - jobQueuePlacementTickNumber;
+		return jobExecutionStartTickNumber - jobQueuePlacementTickNumber;
+	}
+
+	/***
+	 * ticks it takes to end job execution (between queue placement - end of last task execution)
+	 */
+	public int getTicksItTakesToEndExecution() {
+		return jobExecutionEndTickNumber - jobQueuePlacementTickNumber;
 	}
 
 	/***
