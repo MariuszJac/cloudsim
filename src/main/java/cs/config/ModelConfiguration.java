@@ -34,6 +34,13 @@ public class ModelConfiguration  extends ModelConfigurationTemplate implements j
 		setTemplateName("DefaultModelConfigurationTemplate");
 	}
 
+	/** 
+	 * 0-centralized (two threads, one handling short and one handling long jobs 
+	 * 1-distributed (shared memory), 
+	 * 2-decentralized (power of two), 
+	 * 3-decentralized (local memory)
+	 */
+	public int simulationMode = 0;  
 	public int numberOfConsumersForShortJobs;
 	public int numberOfConsumersForLongJobs;
 	public int numberOfProviders;
@@ -62,6 +69,12 @@ public class ModelConfiguration  extends ModelConfigurationTemplate implements j
 	}
 	public void setNumberOfConsumersForLongJobs(int numberOfConsumersForLongJobs) {
 		this.numberOfConsumersForLongJobs = numberOfConsumersForLongJobs;
+	}
+	public int getSimulationMode() {
+		return simulationMode;
+	}
+	public void setSimulationMode(int simulationMode) {
+		this.simulationMode = simulationMode;
 	}
 	
 }

@@ -58,7 +58,10 @@ public class BootstrapManager {
 		for(int i=0;i<configuration.getNumberOfProviders();i++) {
 			ProviderInt provider = new BasicProvider(modelInterface, configuration,i);
 			listProviders.add(provider);
-			GlobalRegistry.addProvider(provider); //add all providers to global registry
+			if(modelInterface.getModelConfiguration().getSimulationMode()==0) {
+				GlobalRegistry.addProvider(provider); //add all providers to global registry
+				System.exit(0);
+			}
 		}
 		modelInterface.setListProviders(listProviders);
 	}

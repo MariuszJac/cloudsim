@@ -3,6 +3,7 @@
   "tickTimeInMilliseconds": 100,
   "numberOfSimulationRepetitions": 1,
   "numberOfSimulationHours": 1,
+  "simulationMode": 0,
   "numberOfConsumersForShortJobs": 1,
   "numberOfConsumersForLongJobs": 1,
   "numberOfProviders": 1
