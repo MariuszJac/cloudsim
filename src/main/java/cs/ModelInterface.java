@@ -29,6 +29,7 @@ import cs.gui.stats.StatsManager;
 import eu.robust.simulation.entities.CIManager;
 import eu.robust.simulation.entities.UserManager;
 
+
 public class ModelInterface extends SimulationModelSchema implements IPlatformSetup{
 	
 	//this is class used to configure the model
