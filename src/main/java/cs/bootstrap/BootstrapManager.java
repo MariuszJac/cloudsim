@@ -60,7 +60,6 @@ public class BootstrapManager {
 			listProviders.add(provider);
 			if(modelInterface.getModelConfiguration().getSimulationMode()==0) {
 				GlobalRegistry.addProvider(provider); //add all providers to global registry
-				System.exit(0);
 			}
 		}
 		modelInterface.setListProviders(listProviders);
