@@ -12,6 +12,7 @@ import cs.entities.Job;
 import cs.entities.ProviderInt;
 import cs.entities.Task;
 
+
 public class TestBasicConsumer {
 
 	private ModelConfiguration modelConfig = null;
