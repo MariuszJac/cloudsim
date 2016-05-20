@@ -3,9 +3,9 @@
   "operationMode": 1,
   "showGUI": false,
   "heapSize": 2024,
-  "batchFolderLocation": "/home/balrog/repos/CloudSim/bin/batch",
-  "resultsFolderLocation": "/home/balrog/repos/CloudSim/bin/results",
-  "bootstrapDataFolderLocation": "/home/balrog/repos/CloudSim/bin/bootstrap",
+  "batchFolderLocation": "/home/mzj/repos/CloudSimRepo/bin/batch",
+  "resultsFolderLocation": "/home/mzj/repos/CloudSimRepo/bin/results",
+  "bootstrapDataFolderLocation": "/home/mzj/repos/CloudSimRepo/bin/bootstrap",
   "modelClassToInstantiate": "cs.ModelInterface",
   "modelConfigurationClassToInstantiate": "cs.config.ModelConfiguration"
 }
